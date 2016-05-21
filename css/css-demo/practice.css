@@ -1,5 +1,5 @@
 
-section#contact-info {
+#contact-info {
   font-size: .8em;
 }
 
@@ -8,6 +8,7 @@ section#contact-info {
   background-color: #e9e5dc;
   border-radius: 25px;
   padding-bottom: 25px;
+  margin-top: 15px;
 }
 
 .bullets {
@@ -21,4 +22,8 @@ section:hover {
 
 #personal-objective p {
   font-style: italic;
+}
+
+.job .featured {
+  font-weight: bold;
 }
