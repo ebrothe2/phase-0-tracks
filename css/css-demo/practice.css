@@ -1,0 +1,24 @@
+
+section#contact-info {
+  font-size: .8em;
+}
+
+
+.job {
+  background-color: #e9e5dc;
+  border-radius: 25px;
+  padding-bottom: 25px;
+}
+
+.bullets {
+  font-size: .8em;
+}
+
+
+section:hover {
+    background-color: blue;
+}
+
+#personal-objective p {
+  font-style: italic;
+}
