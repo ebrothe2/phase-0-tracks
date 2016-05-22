@@ -1,11 +1,11 @@
-body {
-  width: 960px;
-}
-
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
   margin-left: 0px;
+}
+
+body {
+  max-width: 960px;
 }
 
 cite {
@@ -13,21 +13,19 @@ cite {
   margin-top: 10px;
 }
 
+main {
+  /*width: 70%;*/
+}
+
+#external-links {
+  /*width: 20%;*/
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
 }
 
-#external-links {
-  width: 200px;
-  display: inline-block;
-  vertical-align: top;
-}
-
-main {
-  width: 756px;
-  display: inline-block;
-}
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,
 but it's optional! */
@@ -43,4 +41,34 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+
+@media screen and (min-width: 501px) {
+  #external-links {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  main {
+    width: 70%;
+    display: inline-block;
+    left: 50%;
+    right: 50%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    width: 90%;
+  }
+
+  main {
+    width: 90%;
+    left: 50%;
+    right: 50%;
+  }
+
 }
