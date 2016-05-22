@@ -5,3 +5,18 @@
   margin-left: 500px;
 }
 
+#octopus {
+  position: absolute;
+}
+
+#hat {
+  position: absolute;
+  top: 70px;
+  left: 500px;
+}
+
+#glasses {
+  position: relative;
+  top: 100px;
+  left: 40px;
+}
