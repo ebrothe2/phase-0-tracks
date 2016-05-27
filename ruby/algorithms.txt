@@ -1,0 +1,24 @@
+Robot Learns Elevator
+-When elevator doors open, enter
+-Once entered, turn around
+-To travel to floor 14 extend arm and then finger until level with button 1
+	-Move arm right until there are no more buttons
+		-If no buttons = 14 lower arm to next row
+		-Else press 14
+-Once 14 is lit up, 
+	- if door is still open 
+		-press the <> button
+	 	-else wait for elevator to move to desired floor
+-When desired floor is reached 
+	-wait for doors to open and then exit
+
+
+
+Waking up in the morning
+
+-When clock reads 22:00 set alarm to 06:00
+	-Until alarm says “RING RING:
+		-Sleep
+	-If alarm says “Ring Ring” 
+		-press “snooze”
+		-unless clock reads 06:30 then press “off” and 			get out of bed
