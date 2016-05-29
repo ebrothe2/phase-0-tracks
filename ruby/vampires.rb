@@ -5,6 +5,7 @@ def get_employee_allergies
    puts "Do you have any other allergies?"
     allergies = gets.chomp
   end
+  return allergies
 end
 
 def decide_if_new_employee_is_vampire
@@ -37,6 +38,11 @@ def decide_if_new_employee_is_vampire
       elsif insurance_sign_up == "n"
         insurance_sign_up = false
       end
+allergy_result = get_employee_allergies
+  if allergy_result == "sunshine"
+    puts "Probably a vampire"
+    return
+  end
 
   #write an if statement meeting these conditions and if meets none of the criteria results are inconclusive
   #if age == true && (eats_garlic_bread == true || insurance_sign_up = true) then "probably not a vampire"
@@ -55,7 +61,6 @@ def decide_if_new_employee_is_vampire
     else
       puts "results inconclusive"
     end
-
 end
 #decide_if_new_employee_is_vampire
 
