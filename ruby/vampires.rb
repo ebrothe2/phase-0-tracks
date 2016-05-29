@@ -1,3 +1,12 @@
+def get_employee_allergies
+  puts "Do you have any allergies?"
+  allergies = gets.chomp
+  until allergies == "sunshine" || allergies == "done"
+   puts "Do you have any other allergies?"
+    allergies = gets.chomp
+  end
+end
+
 def decide_if_new_employee_is_vampire
   puts "What is your name?"
     name = gets.chomp
