@@ -5,17 +5,19 @@ def encrypt(str)
    index = 0
    password = str
      while index < str.length
-     if password[index] != "z"
-      password[index] = password[index].next
-
+     if password[index] == " "
+        password[index] = " "
+     elsif password[index] != "z"
+        password[index] = password[index].next
      else password[index] = "a"
      end
      index += 1
     end
-   password
+   p password
  end
 
- encrypt("zef")
+ #encrypt("z f")
+
 
 
 
@@ -45,4 +47,19 @@ def decrypt(encrypted_string)
    p decrypt_password
  end
 
-decrypt("afe")
+#decrypt("afe")
+
+#decrypt(encrypt("swordfish"))
+#this works because first both methods are defined above where they are called in the ruby doc. Then they are also telling the program which to run first with the parenthesis. First it knows to apply encrypt method and then apply the decrypt because of the parenthesis telling it the order of operations
+
+puts "Would you like the encrypt a password or decrypt a password? (encrypt/decrypt)"
+    user_choice = gets.chomp
+puts "Enter the word you would like encrypted or decrypted"
+    user_password = gets.chomp
+    if user_choice == "encrypt"
+      encrypt(user_password)
+    elsif user_choice = "decrypt"
+      decrypt(user_password)
+    end
+
+
