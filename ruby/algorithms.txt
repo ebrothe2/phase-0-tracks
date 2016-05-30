@@ -14,11 +14,15 @@ Robot Learns Elevator
 
 
 
-Waking up in the morning
+Algorithm: Waking up in the morning
 
--When clock reads 22:00 set alarm to 06:00
+-When clock reads 22:00 set numbers on alarm to 06:00
 	-Until alarm says “RING RING:
 		-Sleep
-	-If alarm says “Ring Ring” 
+	-when alarm says “Ring Ring” 
 		-press “snooze”
-		-unless clock reads 06:30 then press “off” and 			get out of bed
+		-clock counts 10 more minutes and then repeats ring ring. 
+	-you can press snooze and repeat until clock reads 6:30
+		-when clock reads 06:30 then press “off” 
+		-get out of bed
+			-if clock reaches anything greater than 7:00 before getting out of bed is accomplished, yell “I’m late!” and then jump out of bed
