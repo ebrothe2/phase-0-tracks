@@ -9,7 +9,7 @@ client_information = {}
 puts "Enter client name"
   client_information[:name] = gets.chomp
 puts "Enter client age"
-  client_information[:age] = gets.chomp
+  client_information[:age] = gets.chomp.to_i
 puts "Enter number of children"
   client_information[:number_of_childern] = gets.chomp.to_i
 puts "Enter decor theme"
@@ -26,3 +26,11 @@ puts "Is there a tight time frame? y/n"
     client_information[:tight_time_frame] = true
   else client_information[:tight_time_frame] = false
   end
+
+puts "Client Information Summary"
+puts "Name: #{client_information[:name]}"
+puts "Age: #{client_information[:age]}"
+puts "Number of children: #{client_information[:number_of_childern]}"
+puts "Decor theme: #{client_information[:decor_theme]}"
+puts "Budget? #{client_information[:budget]}"
+puts "Tight time frame? #{client_information[:tight_time_frame]}"
