@@ -1,0 +1,28 @@
+#enter client information
+#print a summary of the information when complete
+#if change needed allow for information to be updated
+#print updates
+
+#enter client info
+#convert to appropriate data type
+client_information = {}
+puts "Enter client name"
+  client_information[:name] = gets.chomp
+puts "Enter client age"
+  client_information[:age] = gets.chomp
+puts "Enter number of children"
+  client_information[:number_of_childern] = gets.chomp.to_i
+puts "Enter decor theme"
+  client_information[:decor_theme] = gets.chomp
+puts "Is there a budget? y/n"
+  client_information[:budget] = gets.chomp
+  if client_information[:budget] == "y"
+    client_information[:budget] = true
+  else client_information[:budget] = false
+  end
+puts "Is there a tight time frame? y/n"
+  client_information[:tight_time_frame] = gets.chomp
+  if client_information[:tight_time_frame] == "y"
+    client_information[:tight_time_frame] = true
+  else client_information[:tight_time_frame] = false
+  end
