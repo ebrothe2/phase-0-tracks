@@ -19,8 +19,10 @@ def name_changer(str)
 
 #now there is an array full of strings, each individual letter of the new first name
 #need to look at each letter, if consonant go to next consonant and if vowel go to next vowel
+#could not get it to work so just iterated through each letter and changed it to the next
 
-  name.map!{|letter| letter.next}
+  name[0].map!{|letter| letter.next}
+  name[1].map!{|letter| letter.next}
 
 #p name
 
@@ -31,10 +33,10 @@ def name_changer(str)
 
 end
 
-puts "What name would you like to change? enter quit to stop"
-  name = gets.chomp
-  until name == "quit"
-    name_changer
-  end
-
+loop do
+  puts "What name would you like to change? Enter quit to stop"
+    user_input = gets.chomp
+    break if user_input == "quit"
+    name_changer(user_input)
+end
 
