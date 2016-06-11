@@ -34,10 +34,37 @@ attr_accessor :weight
 
 end
 
-toddler = Toddler.new(27, 'blue')
-p toddler.weight
-p toddler.eye_color
-p toddler.age
-toddler.play('play peek-a-boo')
-toddler.tantrum
-toddler.nap_time
+# checking toddler class to make sure everything works
+
+# toddler = Toddler.new(27, 'blue')
+# p toddler.weight
+# p toddler.eye_color
+# p toddler.age
+# toddler.play('play peek-a-boo')
+# toddler.tantrum
+# toddler.nap_time
+
+#user interface
+
+lots_of_toddlers = []
+
+puts "Would you like to enter your toddler's information?"
+    response = gets.chomp
+
+until response == 'done'
+
+  puts "Enter your toddler's weight"
+    weight = gets.chomp.to_i
+  puts "Enter your toddler's eye color"
+    eye_color = gets.chomp.to_s
+  puts "Would you like to enter another toddler's information? enter done when finished"
+  response = gets.chomp
+
+  toddler = Toddler.new(weight,eye_color)
+
+  lots_of_toddlers << toddler
+end
+
+lots_of_toddlers.each do |print|
+
+end
