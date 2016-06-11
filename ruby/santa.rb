@@ -56,7 +56,7 @@ santas_list = []
 santas_list << Santa.new('female', 'black')
 santas_list << Santa.new('male', 'Latino')
 
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "Any"]
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "Any", "undecided"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Polish", "Greek", "French", "Swedish"]
 
 # santa_genders.length.times do |each|
