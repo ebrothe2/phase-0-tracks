@@ -64,7 +64,7 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 # end
 
 index = 0
-until index >= 40
+until index >= 20
   santa = Santa.new(example_genders.sample, example_ethnicities.sample)
       puts santa.age
       puts santa.gender
