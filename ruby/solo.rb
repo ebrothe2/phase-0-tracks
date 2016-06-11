@@ -11,10 +11,10 @@
 #a toddler can, if you're lucky, take a nap
 
 class Toddler
-attr_reader :age :eye_color
+attr_reader :age, :eye_color
 attr_accessor :weight
 
-  def initialize(weight,eye_color)
+  def initialize(weight, eye_color)
     @weight = weight
     @eye_color = eye_color
     @age = rand(3)
@@ -33,3 +33,11 @@ attr_accessor :weight
   end
 
 end
+
+toddler = Toddler.new(27, 'blue')
+p toddler.weight
+p toddler.eye_color
+p toddler.age
+toddler.play('play peek-a-boo')
+toddler.tantrum
+toddler.nap_time
