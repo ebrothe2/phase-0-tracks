@@ -9,3 +9,27 @@
 #a toddler plays
 #a toddler can lose their mind aka have a temper tantrum
 #a toddler can, if you're lucky, take a nap
+
+class Toddler
+attr_reader :age :eye_color
+attr_accessor :weight
+
+  def initialize(weight,eye_color)
+    @weight = weight
+    @eye_color = eye_color
+    @age = rand(3)
+  end
+
+  def play(activity)
+    puts "My toddler likes to #{activity}!"
+  end
+
+  def tantrum
+    puts "SCREEEAAAMMINNGGG TODDLER!!!!!"
+  end
+
+  def nap_time
+    puts "zzzzzzzzz...snoring....zzzzzz"
+  end
+
+end
