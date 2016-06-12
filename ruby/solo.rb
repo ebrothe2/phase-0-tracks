@@ -55,7 +55,7 @@ while add_toddler
     weight = gets.chomp.to_i
   puts "Enter your toddler's eye color"
     eye_color = gets.chomp.to_s
-  lots_of_toddlers < Toddler.new(weight,eye_color)
+  lots_of_toddlers << Toddler.new(weight,eye_color)
 
   puts "Would you like to enter another toddler's information? enter done when finished"
     user_response = gets.chomp
