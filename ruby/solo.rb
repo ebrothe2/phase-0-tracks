@@ -65,9 +65,11 @@ break if user_response == 'done'
   #end
 end
 
-p lots_of_toddlers
+#p lots_of_toddlers
 
-lots_of_toddlers.each do
-  puts "Weight: #{weight}"
-end
+ lots_of_toddlers.each do |toddler|
+  puts "Weight: #{toddler.weight}"
+  puts "Eye Color: #{toddler.eye_color}"
+  puts "Age: #{toddler.age}"
+ end
 
