@@ -67,7 +67,7 @@ end
 
 p lots_of_toddlers
 
-# lots_of_toddlers.each do
-
-# end
+lots_of_toddlers.each do
+  puts "Weight: #{weight}"
+end
 
