@@ -48,23 +48,26 @@ end
 
 lots_of_toddlers = []
 
-puts "Would you like to enter your toddler's information?"
-    response = gets.chomp
+add_toddler = true
 
-until response == 'done'
-
+while add_toddler
   puts "Enter your toddler's weight"
     weight = gets.chomp.to_i
   puts "Enter your toddler's eye color"
     eye_color = gets.chomp.to_s
+  lots_of_toddlers < Toddler.new(weight,eye_color)
+
   puts "Would you like to enter another toddler's information? enter done when finished"
-  response = gets.chomp
-
-  toddler = Toddler.new(weight,eye_color)
-
-  lots_of_toddlers << toddler
+    user_response = gets.chomp
+break if user_response == 'done'
+  #if user_response == 'done'
+  #  add_toddler = false
+  #end
 end
 
-lots_of_toddlers.each do |print|
+p lots_of_toddlers
 
-end
+# lots_of_toddlers.each do
+
+# end
+
