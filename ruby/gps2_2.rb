@@ -76,4 +76,17 @@ def print_list(list)
 
 end
 
-create_grocery_list("apples oranges carrots")
+#create_grocery_list("apples oranges carrots")
+
+grocery_list = create_grocery_list("")
+
+add_item('lemonade', grocery_list, quantity = 2)
+add_item('tomatoes', grocery_list, quantity = 3)
+add_item('onions', grocery_list, quantity = 1)
+add_item('ice cream', grocery_list, quantity = 4)
+
+remove_item('lemonade', grocery_list)
+
+update_quantity('ice cream', 1, grocery_list)
+
+print_list(grocery_list)
