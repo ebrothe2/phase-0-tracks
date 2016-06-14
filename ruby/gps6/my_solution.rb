@@ -88,5 +88,12 @@ alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density],
 alaska.virus_effects
 =end
 
+#Reflection:
+#The differences between the two different hash syntaxes in the state data file are two different or alternate ways to write keys and values in a hash. Seemed useful to use the two different syntaxes as a way to make the code more readable.
+#require_relative give you a way to link other information you need to run your code from a different document. require differs in that it uses current directory & require_relative uses the directory of  where the program resides.
+# You can iterate through a hash by making a block
+#in virus_effects we noticed that it was unnecessarily taking in the state as a variable in the speed_of_spread.
+#I felt like this gave me some practice in looking at code and deciding how to make it more DRY.
+
 
 
