@@ -7,13 +7,14 @@
 
 // var str = "Hello";
 
-// ended up being able to call .reverse instead of reversing the index since it returns an array.
 function reversestring(str) {
-  console.log(str.split('').reverse().join(''));
+  return (str.split('').reverse().join(''));
 }
 
-var reverse = reversestring("Hello")
+var backwards = reversestring("Hello");
+
+console.log(backwards);
 
 if (1==1) {
-  console.log(reverse);
+  console.log(backwards);
 }
