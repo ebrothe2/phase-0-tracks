@@ -14,6 +14,6 @@ function reversestring(str) {
 
 var reverse = reversestring("Hello")
 
-if (1=1) {
+if (1==1) {
   console.log(reverse);
 }
