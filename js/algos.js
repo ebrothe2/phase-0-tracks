@@ -3,10 +3,7 @@
 //then look at each phrase individually
 //then count the number of each characters in each individual phrases
 //return the phrase whose number of characters is the longest
-
-
-function findlongestphrase(string) {
-  var phrases = string.split(" ");
+function findlongestphrase(phrases) {
   var longestphrase = '';
   for(var i = 0; i < phrases.length; i++) {
     // phraselist[phrases[i]] = phrases[i].length;
@@ -14,8 +11,7 @@ function findlongestphrase(string) {
         longestphrase = phrases[i];
       }
   }
-console.log(longestphrase);
-return longestphrase
+return longestphrase;
 }
 
 // make a function that takes two objects as parameters
@@ -29,7 +25,6 @@ function shortestToLongest(obj1,obj2) {
     return [obj1,obj2];
   }
 }
-
 function compareObjects(obj1,obj2) {
   var shortobject = shortestToLongest(obj1,obj2)[0]
   var longobject = shortestToLongest(obj1,obj2)[1]
@@ -42,6 +37,13 @@ function compareObjects(obj1,obj2) {
   }
   return result;
 }
+//driver code for compare objects function
+// var car1 = {brand: "mercedes", color: "black", speed: 'superFast', transmission: 'manual'}
+// var car2 = {brand: "mercedes", color: "white", seats: 4}
+
+// console.log(compareObjects(car1, car2))
+// console.log(compareObjects(car1, {}))
+
 
 // Design function for generating a random array
 // input is an integer that tells function how many random words to put in the array
@@ -63,21 +65,21 @@ function random_word() {
   }
   return randomString.join("");
 }
-
 // now use random word to loop through and create an array of random words
 function random_array(integer) {
     var listWords = [];
     for (var i = 0; i < integer; i++) {
       listWords.push(random_word());
     }
-    return listWords
+    return listWords;
 }
 
-//driver code for compare objects function
-var car1 = {brand: "mercedes", color: "black", speed: 'superFast', transmission: 'manual'}
-var car2 = {brand: "mercedes", color: "white", seats: 4}
+// driver code
 
-console.log(compareObjects(car1, car2))
-console.log(compareObjects(car1, {}))
+for (var i = 0; i < 10; i++) {
+  var words = (random_array(3));
+  console.log(words);
+  console.log(findlongestphrase(words));
+}
 
 
