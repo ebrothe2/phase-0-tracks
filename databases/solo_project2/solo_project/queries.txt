@@ -1,0 +1,126 @@
+
+1.
+Command
+sqlite> SELECT * FROM dogfishheadbrewlist
+   ...> ;
+Output
+1|Namaste|4.8|true|1
+2|60 Minute IPA|6|false|1
+3|Berry Wheat|5|true|2
+4|Midas Touch|9|false|1
+5|Black & Bruin|7|true|2
+6|Pants are Cumbersome|6|true|2
+7|Oak-aged Noble Rot|9|false|1
+8|Bloodborne|7.7|true|2
+9|Punkin Ale|7|false|1
+10|Piercing Pils|6|false|1
+11|Romantic Chemistry|7.2|false|1
+12|World Wide Stout|9|false|2
+
+2.
+Command
+sqlite> UPDATE dogfishheadbrewlist SET onTap = "true" WHERE brew_name = "60 Minute IPA";
+Command to verify
+sqlite> SELECT * FROM dogfishheadbrewlist WHERE brew_name = "60 Minute IPA";
+
+Output
+2|60 Minute IPA|6|true|1
+
+3.
+Command
+sqlite> SELECT * FROM distributionlocation, dogfishheadbrewlist WHERE dogfishheadbrewlist.distribution_id = distributionlocation.id;
+Output
+1|nationwide|1|Namaste|4.8|true|1
+1|nationwide|2|60 Minute IPA|6|true|1
+2|brewpub only|3|Berry Wheat|5|true|2
+1|nationwide|4|Midas Touch|9|false|1
+2|brewpub only|5|Black & Bruin|7|true|2
+2|brewpub only|6|Pants are Cumbersome|6|true|2
+1|nationwide|7|Oak-aged Noble Rot|9|false|1
+2|brewpub only|8|Bloodborne|7.7|true|2
+1|nationwide|9|Punkin Ale|7|false|1
+1|nationwide|10|Piercing Pils|6|false|1
+1|nationwide|11|Romantic Chemistry|7.2|false|1
+2|brewpub only|12|World Wide Stout|9|false|2
+
+4.
+Command
+sqlite> SELECT dogfishheadbrewlist.brew_name, distributionlocation.location FROM dogfishheadbrewlist JOIN distributionlocation ON dogfishheadbrewlist.distribution_id = distributionlocation.id;
+Output
+Namaste|nationwide
+60 Minute IPA|nationwide
+Berry Wheat|brewpub only
+Midas Touch|nationwide
+Black & Bruin|brewpub only
+Pants are Cumbersome|brewpub only
+Oak-aged Noble Rot|nationwide
+Bloodborne|brewpub only
+Punkin Ale|nationwide
+Piercing Pils|nationwide
+Romantic Chemistry|nationwide
+World Wide Stout|brewpub only
+
+5.Command
+sqlite> DELETE FROM dogfishheadbrewlist WHERE brew_name = "Piercing Pils";
+Command to check
+sqlite> SELECT * FROM dogfishheadbrewlist;
+Output
+1|Namaste|4.8|true|1
+2|60 Minute IPA|6|true|1
+3|Berry Wheat|5|true|2
+4|Midas Touch|9|false|1
+5|Black & Bruin|7|true|2
+6|Pants are Cumbersome|6|true|2
+7|Oak-aged Noble Rot|9|false|1
+8|Bloodborne|7.7|true|2
+9|Punkin Ale|7|false|1
+11|Romantic Chemistry|7.2|false|1
+12|World Wide Stout|9|false|2
+
+Release 3 - Joins
+Command for Cross JOIN:
+sqlite> SELECT brew, location FROM dogfishheadbrewlist CROSS JOIN distributionlocation;
+
+OUTPUT
+Namaste|nationwide
+Namaste|brewpub only
+60 Minute IPA|nationwide
+60 Minute IPA|brewpub only
+Berry Wheat|nationwide
+Berry Wheat|brewpub only
+Midas Touch|nationwide
+Midas Touch|brewpub only
+Black & Bruin|nationwide
+Black & Bruin|brewpub only
+Pants are Cumbersome|nationwide
+Pants are Cumbersome|brewpub only
+Oak-aged Noble Rot|nationwide
+Oak-aged Noble Rot|brewpub only
+Bloodborne|nationwide
+Bloodborne|brewpub only
+Piercing Pils|nationwide
+Piercing Pils|brewpub only
+Romantic Chemistry|nationwide
+Romantic Chemistry|brewpub only
+World Wide Stout|nationwide
+World Wide Stout|brewpub only
+
+Command for LEFT OUTER JOIN
+SELECT brew, abv, location FROM dogfishheadbrewlist LEFT OUTER JOIN distributionlocation ON dogfishheadbrewlist.distribution_id = distributionlocation.id;
+
+Outout
+Namaste|4.8|nationwide
+60 Minute IPA|6.0|nationwide
+Berry Wheat|5.0|brewpub only
+Midas Touch|9.0|nationwide
+Black & Bruin|7.0|brewpub only
+Pants are Cumbersome|6.0|brewpub only
+Oak-aged Noble Rot|9.0|nationwide
+Bloodborne|7.0|nationwide
+Piercing Pils|6.0|nationwide
+Romantic Chemistry|7.2|nationwide
+World Wide Stout|9.0|brewpub only
+
+
+
+ 
