@@ -11,3 +11,5 @@ What is VPS (virtual private server)? What are the advantages of using a VPS?
 
 Why is it considered a bad idea to run programs as the root user on a Linux system?
  - You are all powerful when you run as the root. Your command rm -rf would be done without any questions. But if you run it as someone else then it would be denied b/c of access. You are more prone to mistakes for software bugs. You dont need it for most uses except for administrative work. You also have more vulnerability to malicious software which would have more access because you gave it full permissions.
+
+
