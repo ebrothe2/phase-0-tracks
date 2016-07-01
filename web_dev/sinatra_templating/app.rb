@@ -25,3 +25,7 @@ post '/students' do
 end
 
 # add static resources
+
+get '/release0/new' do
+  erb :release0
+end
