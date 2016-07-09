@@ -42,6 +42,27 @@ get '/students/:id' do
   student.to_s
 end
 
-get '/views/release0' do
-  erb :release0
+#write a get route that displays an address
+get '/contact' do
+  "<h1>851 Hubbard Chicago IL</h1>"
+end
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good Job, #{params[:name]}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/add_numbers/:number1/:number2' do
+  number1 = params[:number1]
+  number2 = params[:number2]
+  "#{number1} + #{number2} = #{number1.to_i + number2.to_i}"
+end
+
+get '/campus/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  student.to_s
 end
