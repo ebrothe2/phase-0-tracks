@@ -26,6 +26,11 @@ end
 
 # add static resources
 
-get '/release0/new' do
+get '/release0' do
   erb :release0
+end
+
+post '/comrades' do
+  db.execute("INSERT INTO students (name) VALUES (?)", [params['name']])
+  redirect '/'
 end
